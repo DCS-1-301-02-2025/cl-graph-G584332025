@@ -70,6 +70,7 @@ left to right direction
 actor "学生" as student
 actor "教員" as faculty
 rectangle {
+    usecase "課題の登録" as uc1
     usecase "課題の受領" as uc2
     usecase "リポジトリのクローン" as uc3
     usecase "課題ファイルの修正" as uc4
@@ -84,8 +85,9 @@ student --> uc4
 student --> uc5
 student --> uc6
 student --> uc7
-faculty --> uc1
-faculty --> uc8
+uc1 <-- faculty
+uc8 <-- faculty
+
 @enduml
 ```
 
@@ -95,20 +97,22 @@ faculty --> uc8
 独自の図解を作成せよ．対象は自由に決めてよいが，
 誰かのコピーにならないように留意せよ．
 ```plantUML
-@startwbs ex03
-*工学部の授業
-**プログラミングⅠ
-***プログラミングⅡ
-**プログラミング基礎Ⅰ
-***プログラミング基礎Ⅱ
-**計算機工学
-***論理回路
+@startwbs ex04
+* 工学部の授業
+** プログラミングⅠ
+*** プログラミングⅡ
+** プログラミング基礎Ⅰ
+*** プログラミング基礎Ⅱ
+** 計算機工学
+*** 論理回路
+
 @endwbs 
+
 ```
 
 
 ## チェック
-- [ ] 課題 3.1 有向グラフ
-- [ ] 課題 3.2 WBS
-- [ ] 課題 3.3 ユースケース図
-- [ ] 課題 3.4 オリジナルの図解
+- [x] 課題 3.1 有向グラフ
+- [x] 課題 3.2 WBS
+- [x] 課題 3.3 ユースケース図
+- [x] 課題 3.4 オリジナルの図解
